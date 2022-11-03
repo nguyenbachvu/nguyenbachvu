@@ -1,0 +1,16 @@
+h1 {
+     font-size: 40px;
+    }
+b {
+    color: rgb(12, 128, 89);
+}
+#title { 
+    background-color: antiquewhite;
+}
+.title1 {
+    background-color: aliceblue;
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    height: 150px;
+ }
