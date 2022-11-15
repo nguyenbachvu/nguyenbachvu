@@ -1,0 +1,361 @@
+* {
+    box-sizing: inherit;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    box-sizing: border-box;
+    position: relative;
+  }
+  .nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--backgound-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .menu_wrap {
+    display: flex;
+    /* max-width: 1366px; */
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+  .menu-item {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--grey);
+    padding: 0.5rem 1.5rem;
+    margin-left: 1rem;
+    transition: 0.2s ease-in-out;
+  }
+  .menu-item:hover,
+  .menu-item.active {
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+  }
+  .fullheight {
+    height: 100vh;
+  }
+  .align-item-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .container {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 9rem 0;
+  }
+  .fullwidth {
+    width: 100%;
+  }
+  .food-menu {
+    padding: 4rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .food-menu-dcs {
+    font-size: 2.2rem;
+  }
+  .food-menu p {
+    font-size: 1.4rem;
+    margin: 3rem 0;
+  }
+  .food-categogy {
+    display: flex;
+    margin-bottom: 3rem;
+  }
+  .food-categogy button {
+    padding: 5px 3rem;
+    border-radius: 1rem;
+    margin: 0 2rem;
+    color: var(--primary-color);
+    outline: none;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    font-weight: 600;
+    background-color: transparent;
+  }
+  .food-categogy button:hover,
+  .food-categogy button.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+  .cart__btn i:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+  }
+  /* FOOD MENU SECTION  */
+  .food-item-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .food-item {
+    width: 25%;
+    height: 30rem;
+    margin-bottom: 4rem;
+  }
+  .item-wrap {
+    height: 100%;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    border-radius: 2rem;
+    margin: 2rem;
+  }
+  .item-wrap:hover {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+  .item-info {
+    display: flex;
+    margin-top: 4rem;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+  .des-left h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--grey);
+    margin-top: 10px;
+  }
+  .des-left span {
+    margin-top: 5px;
+  
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--grey);
+  }
+  .des-left img {
+    position: relative;
+    border-radius: 2rem;
+    max-width: 100%; 
+  }
+  /* Grid system */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  [class*="col-"] {
+    padding: 1rem;
+  }
+  
+  .col-1 {
+    width: 8.33%;
+  }
+  
+  .col-2 {
+    width: 16.66%;
+  }
+  
+  .col-3 {
+    width: 25%;
+  }
+  
+  .col-4 {
+    width: 33.33%;
+  }
+  
+  .col-5 {
+    width: 41.66%;
+  }
+  
+  .col-6 {
+    width: 50%;
+  }
+  
+  .col-7 {
+    width: 58.33%;
+  }
+  
+  .col-8 {
+    width: 66.66%;
+  }
+  
+  .col-9 {
+    width: 75%;
+  }
+  
+  .col-10 {
+    width: 83.33%;
+  }
+  
+  .col-11 {
+    width: 91.66%;
+  }
+  
+  .col-12 {
+    width: 100%;
+  }
+  @media only screen and (max-width: 600px) {
+    * {
+      line-height: 1.8rem;
+    }
+  
+    h1 {
+      font-size: 3rem !important;
+    }
+    span {
+      font-size: inherit;
+    }
+    .menu {
+      display: none;
+    }
+    .cart__btn i {
+      padding: 1rem;
+    }
+    .slogan {
+      padding: 0 1rem;
+    }
+    .slogan h1 {
+      font-size: 4rem;
+    }
+    .about__slogan.start {
+      transform: translateX(0) !important;
+    }
+    .about__slogan {
+      padding: 4rem;
+    }
+    #home {
+      padding: 0;
+    }
+    .about__slogan h3 {
+      line-height: 2.5rem;
+    }
+    .about__slogan p {
+      line-height: 2rem;
+    }
+    .food-menu h1 {
+      line-height: 3.4rem;
+    }
+    .food-item {
+      width: 50%;
+      height: 20rem;
+    }
+    .food-categogy {
+      overflow-y: scroll;
+    }
+    .food-categogy button {
+      width: max-content;
+    }
+    .item-info {
+      margin-top: 3rem;
+    }
+    .des-left {
+      margin-right: 0.5rem;
+      margin-left: -8px;
+    }
+    .des-left h3 {
+      margin: 0px;
+    }
+    .cart-btn i {
+      font-size: 1.2rem;
+      padding: 0.8rem;
+    }
+    .cart-btn {
+      padding: 0px;
+    }
+    .back-to-top {
+      bottom: 6rem;
+      right: 6rem;
+    }
+    .review-wrap.active.start {
+      transform: scale(1) !important;
+    }
+    .input-group button {
+      margin-right: 2rem;
+    }
+  
+    .mb-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      /* justify-content: space-between; */
+      align-items: center;
+      background-color: var(--white);
+      z-index: 99;
+      overflow: hidden;
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+      box-shadow: 0px 7px 29px 0px rgba(0, 0, 0, 0.1);
+    }
+  
+    .mb-nav-item i {
+      font-size: 2rem;
+      padding: 2rem 3.7rem;
+      color: var(--grey);
+      transition: 0.1s ease-in-out;
+    }
+    .mb-nav-item.active i,
+    .mb-nav-item.active a {
+      color: var(--white);
+      background-color: var(--primary-color);
+    }
+    .col-xs-1 {
+      width: 8.33%;
+    }
+  
+    .col-xs-2 {
+      width: 16.66%;
+    }
+  
+    .col-xs-3 {
+      width: 25%;
+    }
+  
+    .col-xs-4 {
+      width: 33.33%;
+    }
+  
+    .col-xs-5 {
+      width: 41.66%;
+    }
+  
+    .col-xs-6 {
+      width: 50%;
+    }
+  
+    .col-xs-7 {
+      width: 58.33%;
+    }
+  
+    .col-xs-8 {
+      width: 66.66%;
+    }
+  
+    .col-xs-9 {
+      width: 75%;
+    }
+  
+    .col-xs-10 {
+      width: 83.33%;
+    }
+  
+    .col-xs-11 {
+      width: 91.66%;
+    }
+  
+    .col-xs-12 {
+      width: 100%;
+    }
+    .h-xs {
+      display: none;
+    }
+  }
