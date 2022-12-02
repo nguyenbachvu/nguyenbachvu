@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <b>Nhập số</b>
+    <div>
+       <input id="number" >
+       <button id="btn">submit</button>
+       <p id="resul"></p>
+    </div>
+    <script>
+        const number = document.getElementById('number');
+        const btn = document.getElementById('btn');
+        const resul = document.getElementById('resul');
+
+        btn.addEventListener('click', (event) => {
+        if(number <= 10){
+            resul.innerHTML = 'nhập đúng';
+        }
+        else{
+            resul.innerHTML = 'nhập sai';
+        }
+        console.log(event.target); -->
+        <!-- });
+    
+    </script> -->
+    <p>Hãy nhập một số từ 1 đến 10:</p>
+    <input id="numb" type="text">
+    <button onclick="validate()">Submit</button>
+    <p id="val"></p>
+
+    <script>
+        const d = document.getElementById('val');
+        
+        function validate() {
+            let x = document.getElementById('numb').value;
+            if (isNaN(x) || x < 1 || x > 10) {
+                d.innerHTML = 'Không thỏa mãn';
+            } else {
+                d.innerHTML = 'Thỏa mãn';
+            }
+        }
+    </script>
+</body>
+</html>
