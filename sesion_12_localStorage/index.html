@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class = "container">
+        <h1> MY TO DO LIST</h1>
+        <div>
+            <form id="inputForm">
+                <input id="taskItem" placeholder="Add">
+                <button>Add</button>
+            </form>
+            <br>
+        </div>
+        <div >
+            <ul id="taskList">
+              
+            </ul>
+        </div>
+
+        <div>
+            <br><br>
+            <button id="save_button">Save List</button>
+        </div>
+    </div>    
+    
+    <div>
+        <div id="checkboxes">
+            <label>some label</label>
+            <ul>
+                <li><input type="checkbox"> checkbox 1</li>
+                <li><input type="checkbox"> checkbox 2</li>
+                <li><input type="checkbox"> checkbox 3</li>
+                <li><input type="checkbox"> checkbox 4</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function addTask(task, completed = false) {
+    const liTaskItem = document.createElement('li');
+    liTaskItem.className = 'li-task-item';
+    
+    liTaskItem.innerHTML = task;
+    document.getElementById("taskList").appendChild(liTaskItem);
+}
+
+
+var form1 = document.getElementById("inputForm");
+form1.addEventListener('submit', function(event) {
+    var x = form1.elements[0].value;
+    if (x === "") {
+        alert("Input again")
+    }
+    else {
+        addTask(x);
+        event.preventDefault();    
+    }
+})
+
+
+var todo = [];
+
+var saveButton = document.getElementById("save_button");
+saveButton.addEventListener('click', function() {
+    var lis = document.querySelectorAll('li.li-task-item'); 
+    
+    for (let i = 0; i < lis.length; i++) {
+        todo.push(lis[i].innerHTML); 
+    }
+    console.log(todo);
+
+    const myJSON = JSON.stringify(todo);
+    localStorage.setItem("taskJSON", myJSON);
+    alert("Saved " + lis.length + " List")
+})
+
+    let todoJSON = localStorage.getItem("taskJSON");
+    var todo1 = JSON.parse(todoJSON);
+    console.log(todo1);
+
+    if (todo1 != null) {
+        for (let i = 0; i < todo1.length; i++) {
+            addTask(todo1[i])
+        }
+    }
+    </script>
+</body>
+</html>
